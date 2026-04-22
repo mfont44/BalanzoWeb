@@ -1,0 +1,22 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "ABCDE12345.com.yourcompany.balanzo"
+        ],
+        "components": [
+          {
+            "/": "/group/*",
+            "comment": "Enllacos de grup compartits"
+          },
+          {
+            "/": "/invite/*",
+            "comment": "Enllacos d'invitacio a grup"
+          }
+        ]
+      }
+    ]
+  }
+}
