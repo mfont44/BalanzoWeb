@@ -42,6 +42,9 @@ const en: WebDictionary = {
       "Group dashboard",
       "Expense list",
       "Payment summary",
+      "Expense detail",
+      "Group balance",
+      "Group profile",
     ],
   },
   support: {
@@ -66,8 +69,9 @@ const en: WebDictionary = {
       {
         title: "2. Data we collect",
         body: [
-          "Account data: email address, profile identifiers, and core preferences.",
+          "Account data: email address and password (the only authentication method), profile identifiers, and basic preferences.",
           "Usage data: groups, expenses, participations, and history required for app operation.",
+          "Third-party data: when entering third-party personal data (for example, to add members to a group or assign expenses), users guarantee they have prior consent from those individuals to provide their information to Balanzo.",
           "Technical data: device information and minimal security/diagnostic logs.",
         ],
       },
@@ -90,37 +94,45 @@ const en: WebDictionary = {
         title: "5. Recipients and processors",
         body: [
           "We do not sell personal data.",
-          "We may use technology providers for hosting, analytics, and infrastructure required to run Balanzo.",
-          "These providers process data under Balanzo instructions and proper agreements.",
+          "We use Supabase as our main technology provider for database hosting, infrastructure, and user authentication.",
+          "Our technology providers process data under strict Balanzo instructions and through appropriate data processing agreements.",
         ],
       },
       {
         title: "6. International transfers",
         body: [
           "Some providers may be located outside the European Economic Area.",
-          "When applicable, we implement appropriate safeguards, such as Standard Contractual Clauses.",
+          "When this occurs, we apply appropriate legal safeguards (for example, Standard Contractual Clauses approved by the European Commission).",
         ],
       },
       {
-        title: "7. User rights",
+        title: "7. User rights and data deletion",
         body: [
-          "You may exercise rights of access, rectification, erasure, objection, restriction, and portability.",
-          "You may also withdraw consent where processing is based on consent.",
-          "To exercise rights, contact itinerariapps@gmail.com.",
+          "Account and data deletion: users can permanently delete their data and remove their account whenever they wish, directly through the in-app settings options.",
+          "Other rights: you may exercise your rights of access, rectification, erasure, objection, restriction, and portability at any time. You may also withdraw consent where applicable.",
+          "To exercise your rights or make inquiries, contact itinerariapps@gmail.com.",
         ],
       },
       {
-        title: "8. Children",
+        title: "8. Data security",
+        body: [
+          "We apply appropriate technical and organizational measures to protect personal data against unauthorized access, loss, alteration, or improper disclosure.",
+          "These measures include, among others: access control based on user profile, user authentication, database security policies, and data transmission through secure channels.",
+          "We also review and update these measures periodically to maintain an adequate level of security according to the state of technology and the nature of the data processed.",
+        ],
+      },
+      {
+        title: "9. Children",
         body: [
           "Balanzo is not intended for children under 14 years old.",
-          "If we detect child data without legal basis, we will remove it promptly.",
+          "If we detect that we have collected child data without an appropriate legal basis, we will delete it as soon as possible.",
         ],
       },
       {
-        title: "9. Changes to this policy",
+        title: "10. Changes to this policy",
         body: [
           "We may update this policy to reflect legal, technical, or product changes.",
-          "The current version will always be available on this page with its update date.",
+          "We will publish the current version on this same page, always indicating the date of the latest update.",
         ],
       },
     ],

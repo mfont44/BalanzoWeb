@@ -42,6 +42,9 @@ const es: WebDictionary = {
       "Panel del grupo",
       "Lista de gastos",
       "Resumen de pagos",
+      "Detalle de gasto",
+      "Balance del grupo",
+      "Perfil del grupo",
     ],
   },
   support: {
@@ -52,7 +55,7 @@ const es: WebDictionary = {
   privacyPage: {
     title: "Política de privacidad",
     intro:
-      "Esta política explica como Balanzo trata los datos personales cuando utilizas la aplicacion y la web.",
+      "Esta política explica cómo Balanzo trata los datos personales cuando utilizas la aplicación y la web.",
     updatedAt: "Última actualización: 22 de abril de 2026",
     sections: [
       {
@@ -60,67 +63,76 @@ const es: WebDictionary = {
         body: [
           "Responsable: Balanzo (Itinerari Apps).",
           "Contacto: itinerariapps@gmail.com.",
-          "Balanzo actua como responsable del tratamiento de los datos personales vinculados al servicio.",
+          "Balanzo actúa como responsable del tratamiento de los datos personales vinculados al servicio.",
         ],
       },
       {
         title: "2. Datos que recopilamos",
         body: [
-          "Datos de cuenta: correo electronico, identificadores de perfil y preferencias basicas.",
+          "Datos de cuenta: correo electrónico y contraseña (único método de autenticación), identificadores de perfil y preferencias básicas.",
           "Datos de uso: grupos, gastos, participaciones e historial necesario para el funcionamiento de la app.",
-          "Datos tecnicos: informacion de dispositivo, logs minimos de seguridad y diagnostico.",
+          "Datos de terceros: al introducir datos de terceras personas (por ejemplo, para añadir miembros a un grupo o asignar gastos), el usuario garantiza que dispone del consentimiento previo de dichas personas para facilitar su información a Balanzo.",
+          "Datos técnicos: información de dispositivo, logs mínimos de seguridad y diagnóstico.",
         ],
       },
       {
         title: "3. Finalidades y base legal",
         body: [
-          "Prestacion del servicio y ejecucion del contrato de uso de Balanzo.",
-          "Mantenimiento, seguridad y prevencion del fraude bajo interes legitimo.",
+          "Prestación del servicio y ejecución del contrato de uso de Balanzo.",
+          "Mantenimiento, seguridad y prevención del fraude bajo interés legítimo.",
           "Comunicaciones de soporte e incidencias, incluyendo respuesta a consultas de usuarios.",
         ],
       },
       {
         title: "4. Conservación de datos",
         body: [
-          "Conservamos los datos mientras la cuenta este activa o sea necesario para prestar el servicio.",
-          "Si solicitas la supresion de la cuenta, eliminaremos o anonimizaremos los datos conforme a obligaciones legales aplicables.",
+          "Conservamos los datos mientras la cuenta esté activa o sea necesario para prestar el servicio.",
+          "Si solicitas la supresión de la cuenta, eliminaremos o anonimizaremos los datos conforme a las obligaciones legales aplicables.",
         ],
       },
       {
         title: "5. Destinatarios y proveedores",
         body: [
           "No vendemos datos personales a terceros.",
-          "Podemos trabajar con proveedores tecnologicos para alojamiento, analitica e infraestructura necesarios para operar Balanzo.",
-          "Estos proveedores tratan datos bajo instrucciones de Balanzo y contratos adecuados.",
+          "Utilizamos Supabase como proveedor tecnológico principal para el alojamiento de la base de datos, la infraestructura y la autenticación de los usuarios.",
+          "Nuestros proveedores tecnológicos tratan los datos bajo estrictas instrucciones de Balanzo y mediante contratos de encargado de tratamiento adecuados.",
         ],
       },
       {
         title: "6. Transferencias internacionales",
         body: [
-          "Algunos proveedores pueden estar ubicados fuera del Espacio Economico Europeo.",
-          "Cuando ocurra, aplicaremos garantias adecuadas (por ejemplo, clausulas contractuales tipo).",
+          "Algunos proveedores pueden estar ubicados fuera del Espacio Económico Europeo.",
+          "Cuando ocurra, aplicaremos las garantías legales adecuadas (por ejemplo, cláusulas contractuales tipo aprobadas por la Comisión Europea).",
         ],
       },
       {
-        title: "7. Derechos de las personas usuarias",
+        title: "7. Derechos de las personas usuarias y Eliminación de datos",
         body: [
-          "Puedes ejercer derechos de acceso, rectificacion, supresion, oposicion, limitacion y portabilidad.",
-          "Tambien puedes retirar consentimientos otorgados cuando sea aplicable.",
-          "Para ejercer tus derechos, escribe a itinerariapps@gmail.com.",
+          "Eliminación de cuenta y datos: los usuarios pueden borrar sus datos y eliminar su cuenta de forma definitiva siempre que lo deseen, directamente a través de las opciones de configuración dentro de la aplicación.",
+          "Otros derechos: puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad en cualquier momento. También puedes retirar los consentimientos otorgados cuando sea aplicable.",
+          "Para ejercer tus derechos o realizar consultas, escribe a itinerariapps@gmail.com.",
         ],
       },
       {
-        title: "8. Menores de edad",
+        title: "8. Seguridad de los datos",
         body: [
-          "Balanzo no esta dirigida a menores de 14 años.",
-          "Si detectamos datos de menores sin base legal, los eliminaremos lo antes posible.",
+          "Aplicamos medidas técnicas y organizativas adecuadas para proteger los datos personales contra el acceso no autorizado, la pérdida, la alteración o la divulgación indebida.",
+          "Entre estas medidas se incluyen, entre otras: control de acceso a la información según el perfil de usuario, autenticación de usuarios, políticas de seguridad en la base de datos y transmisión de datos mediante canales seguros.",
+          "También revisamos y actualizamos periódicamente estas medidas para mantener un nivel de seguridad adecuado de acuerdo con el estado de la tecnología y la naturaleza de los datos tratados.",
         ],
       },
       {
-        title: "9. Cambios en esta política",
+        title: "9. Menores de edad",
         body: [
-          "Podemos actualizar esta politica para reflejar cambios legales o funcionales del servicio.",
-          "Publicaremos la version vigente en esta misma pagina indicando la fecha de actualizacion.",
+          "Balanzo no está dirigida a menores de 14 años.",
+          "Si detectamos que hemos recopilado datos de menores sin la base legal adecuada, procederemos a eliminarlos lo antes posible.",
+        ],
+      },
+      {
+        title: "10. Cambios en esta política",
+        body: [
+          "Podemos actualizar esta política para reflejar cambios legales o funcionales del servicio.",
+          "Publicaremos la versión vigente en esta misma página indicando siempre la fecha de la última actualización.",
         ],
       },
     ],

@@ -42,6 +42,9 @@ const ca: WebDictionary = {
       "Dashboard del grup",
       "Llista de despeses",
       "Resum de pagaments",
+      "Detall de despesa",
+      "Balanç del grup",
+      "Perfil del grup",
     ],
   },
   support: {
@@ -66,8 +69,9 @@ const ca: WebDictionary = {
       {
         title: "2. Dades que recollim",
         body: [
-          "Dades de compte: correu electrònic, identificadors de perfil i preferències bàsiques.",
+          "Dades de compte: correu electrònic i contrasenya (mètode únic d'autenticació), identificadors de perfil i preferències bàsiques.",
           "Dades d'ús: grups, despeses, participacions i historial necessari per al funcionament de l'app.",
+          "Dades de tercers: en introduir dades de terceres persones (per exemple, per afegir membres a un grup o assignar despeses), l'usuari garanteix que disposa del consentiment previ d'aquestes persones per facilitar la seva informació a Balanzo.",
           "Dades tècniques: informació de dispositiu, logs mínims de seguretat i diagnòstic.",
         ],
       },
@@ -90,37 +94,45 @@ const ca: WebDictionary = {
         title: "5. Destinataris i proveïdors",
         body: [
           "No venem dades personals a tercers.",
-          "Podem treballar amb proveïdors tecnològics per allotjament, analítica i infraestructura necessaris per operar Balanzo.",
-          "Aquests proveïdors tracten dades sota instruccions de Balanzo i contractes adequats.",
+          "Utilitzem Supabase com a proveïdor tecnològic principal per a l'allotjament de la base de dades, la infraestructura i l'autenticació dels usuaris.",
+          "Els nostres proveïdors tecnològics tracten les dades sota instruccions estrictes de Balanzo i mitjançant contractes d'encarregat del tractament adequats.",
         ],
       },
       {
         title: "6. Transferències internacionals",
         body: [
           "Alguns proveïdors poden estar ubicats fora de l'Espai Econòmic Europeu.",
-          "Quan això passi, aplicarem garanties adequades (per exemple, clàusules contractuals tipus).",
+          "Quan això passi, aplicarem les garanties legals adequades (per exemple, clàusules contractuals tipus aprovades per la Comissió Europea).",
         ],
       },
       {
-        title: "7. Drets de les persones usuàries",
+        title: "7. Drets de les persones usuàries i eliminació de dades",
         body: [
-          "Pots exercir drets d'accés, rectificació, supressió, oposició, limitació i portabilitat.",
-          "També pots retirar consentiments atorgats quan sigui aplicable.",
-          "Per exercir drets, escriu a itinerariapps@gmail.com.",
+          "Eliminació de compte i dades: els usuaris poden esborrar les seves dades i eliminar el seu compte de manera definitiva sempre que ho desitgin, directament a través de les opcions de configuració dins de l'aplicació.",
+          "Altres drets: pots exercir els teus drets d'accés, rectificació, supressió, oposició, limitació i portabilitat en qualsevol moment. També pots retirar els consentiments atorgats quan sigui aplicable.",
+          "Per exercir els teus drets o fer consultes, escriu a itinerariapps@gmail.com.",
         ],
       },
       {
-        title: "8. Menors d'edat",
+        title: "8. Seguretat de les dades",
         body: [
-          "Balanzo no està dissenyada per a menors de 14 anys.",
-          "Si detectem dades de menors sense base legal, les eliminarem tan aviat com sigui possible.",
+          "Apliquem mesures tècniques i organitzatives adequades per protegir les dades personals contra l'accés no autoritzat, la pèrdua, l'alteració o la divulgació indeguda.",
+          "Entre aquestes mesures s'inclouen, entre d'altres: control d'accés a la informació segons el perfil d'usuari, autenticació d'usuaris, polítiques de seguretat a la base de dades i transmissió de dades mitjançant canals segurs.",
+          "També revisem i actualitzem periòdicament aquestes mesures per mantenir un nivell de seguretat adequat d'acord amb l'estat de la tecnologia i la naturalesa de les dades tractades.",
         ],
       },
       {
-        title: "9. Canvis en aquesta política",
+        title: "9. Menors d'edat",
+        body: [
+          "Balanzo no està dirigida a menors de 14 anys.",
+          "Si detectem que hem recopilat dades de menors sense la base legal adequada, procedirem a eliminar-les tan aviat com sigui possible.",
+        ],
+      },
+      {
+        title: "10. Canvis en aquesta política",
         body: [
           "Podem actualitzar aquesta política per reflectir canvis legals o funcionals del servei.",
-          "Publicarem la versió vigent en aquesta mateixa pàgina indicant la data d'actualització.",
+          "Publicarem la versió vigent en aquesta mateixa pàgina indicant sempre la data de la darrera actualització.",
         ],
       },
     ],

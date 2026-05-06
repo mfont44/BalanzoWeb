@@ -4,8 +4,31 @@ import { notFound } from "next/navigation";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { getDictionary } from "@/src/i18n/dictionaries";
 import { isLocale } from "@/src/i18n/config";
+import ca1 from "@/src/images/ca/1.png";
+import ca2 from "@/src/images/ca/2.png";
+import ca3 from "@/src/images/ca/3.png";
+import ca4 from "@/src/images/ca/4.png";
+import ca5 from "@/src/images/ca/5.png";
+import ca6 from "@/src/images/ca/6.png";
+import en1 from "@/src/images/en/1.png";
+import en2 from "@/src/images/en/2.png";
+import en3 from "@/src/images/en/3.png";
+import en4 from "@/src/images/en/4.png";
+import en5 from "@/src/images/en/5.png";
+import en6 from "@/src/images/en/6.png";
+import es1 from "@/src/images/es/1.png";
+import es2 from "@/src/images/es/2.png";
+import es3 from "@/src/images/es/3.png";
+import es4 from "@/src/images/es/4.png";
+import es5 from "@/src/images/es/5.png";
+import es6 from "@/src/images/es/6.png";
 
 const SUPPORT_EMAIL = "itinerariapps@gmail.com";
+const screenshotsByLocale = {
+  ca: [ca1, ca2, ca3, ca4, ca5, ca6],
+  en: [en1, en2, en3, en4, en5, en6],
+  es: [es1, es2, es3, es4, es5, es6],
+} as const;
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -16,6 +39,7 @@ export default async function LocalizedHomePage({ params }: Props) {
   if (!isLocale(locale)) notFound();
   const t = getDictionary(locale);
   const currentPath = `/${locale}`;
+  const screenshots = screenshotsByLocale[locale];
 
   return (
     <div className="relative overflow-hidden">
@@ -65,15 +89,14 @@ export default async function LocalizedHomePage({ params }: Props) {
         </div>
         <div className="relative mx-auto w-full max-w-xs">
           <div className="absolute -inset-3 rounded-[2rem] bg-indigo-500/15 blur-xl" />
-          <div className="relative rounded-[2rem] border border-zinc-200 bg-zinc-950 p-3 shadow-xl">
-            <div className="rounded-[1.5rem] bg-white p-4">
-              <div className="mb-3 h-4 w-24 rounded bg-zinc-100" />
-              <div className="space-y-2">
-                <div className="h-10 rounded-xl bg-indigo-50" />
-                <div className="h-10 rounded-xl bg-zinc-100" />
-                <div className="h-10 rounded-xl bg-zinc-100" />
-              </div>
-            </div>
+          <div className="relative aspect-[9/19.5] overflow-hidden rounded-[2rem] border border-zinc-200 bg-zinc-950 p-3 shadow-xl">
+            <Image
+              src={screenshots[0]}
+              alt={t.screenshots.placeholders[0] ?? `${t.screenshots.title} 1`}
+              fill
+              className="rounded-[1.5rem] object-cover"
+              sizes="(max-width: 640px) 90vw, 320px"
+            />
           </div>
         </div>
       </section>
@@ -102,14 +125,18 @@ export default async function LocalizedHomePage({ params }: Props) {
           {t.screenshots.title}
         </h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {t.screenshots.placeholders.map((label, index) => (
+          {screenshots.map((screenshot, index) => (
             <div
-              key={label}
-              className="relative mx-auto flex aspect-[9/19.5] w-full max-w-[240px] items-end overflow-hidden rounded-[1.8rem] border border-zinc-200 bg-zinc-950 p-4 text-sm text-white shadow-lg"
+              key={`${locale}-screenshot-${index + 1}`}
+              className="relative mx-auto aspect-[9/19.5] w-full max-w-[240px] overflow-hidden rounded-[1.8rem] border border-zinc-200 bg-zinc-950 shadow-lg"
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-900/40 to-indigo-400/30" />
-              <div className="absolute left-1/2 top-2.5 h-1.5 w-16 -translate-x-1/2 rounded-full bg-white/25" />
-              <span className="relative z-10 font-medium">{`${index + 1}. ${label}`}</span>
+              <Image
+                src={screenshot}
+                alt={t.screenshots.placeholders[index] ?? `${t.screenshots.title} ${index + 1}`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 40vw, 240px"
+              />
             </div>
           ))}
         </div>
